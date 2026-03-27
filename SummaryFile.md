@@ -3,7 +3,7 @@
 
 ## Project: CE React Migration  
 
-### Mentors : Anoop, Prateek, Suresh  
+### Mentors : Anoop, Suresh  
 ### Interns : Naitik, Mansi  
 
 ---
