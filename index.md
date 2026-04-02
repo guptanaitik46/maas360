@@ -50,10 +50,10 @@ The existing **Cloud Extender (CE)** view within the IBM MaaS360 application is 
 ## Key Challenges
 
 | Challenge | Mitigation Strategy |
-|----------|--------------------|
-| Build Configuration | Debugging `ui-policy-management` and `maas-react-app` scripts |
-| Carbon Adoption | Deep dive into Carbon Grid System for functional parity |
-| Backend Complexity | Systematic analysis of Phase 8 REST APIs |
+| :--- | :--- |
+| **Build & Environment Config** | Active debugging of build scripts for `ui-policy-management` and `ui-fs-management` to ensure ecosystem compatibility. |
+| **Carbon Design System Adoption** | Deep-dive analysis of Carbon documentation and grid-system layouts to maintain functional parity with legacy views. |
+| **Backend Integration Complexity** | Systematic analysis of existing REST APIs (Phase 8) before initiating frontend-to-backend binding. |
 
 ---
 
