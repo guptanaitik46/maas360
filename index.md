@@ -1,76 +1,64 @@
-# cloud-extender-react-migration
+# CE-React-Migration
 
 > **Team:** Naitik, Mansi  
 > **Mentors:** Anoop, Suresh  
-> **Summary:** Documentation for migrating the legacy Cloud Extender (CE) view to a standalone React-based application using Carbon Design System.
 
----
 
-## problem-statement
-The existing **Cloud-Extender (CE)** view within the IBM MaaS360 application is built on a legacy architecture that has led to several critical performance and usability bottlenecks:
+## Problem Statement
 
-* **high-latency-loading-times:** Users experience significant delays when accessing CE views.
-* **monolithic-interference:** Tight coupling causes resource contention and routing conflicts.
-* **resource-contention:** Simultaneous loading of `device-view` components leads to heavy browser overhead.
-* **maintenance-complexity:** Difficult debugging within the legacy framework.
+The existing **Cloud Extender (CE)** view within the IBM MaaS360 application is built on a legacy architecture that has led to several critical performance and usability bottlenecks:
+
+- **High Latency Loading Times:** Users experience significant delays when accessing CE views.
+- **Monolithic Interference:** Tight coupling causes resource contention and routing conflicts.
+- **Resource Contention:** Simultaneous loading of `Device View` components leads to heavy browser overhead.
+- **Maintenance Complexity:** Difficult debugging within the legacy framework.
 
 **Solution:** Migrate the Cloud Extender module to a standalone React-based application using the **Carbon Design System**.
 
 ---
 
-## business-objectives
+## Business Objectives
 
-### 1. improve-user-experience
-* **goal:** Drastically reduce initial load times and page transitions.
-* **impact:** Seamless, responsive UI for IT administrators.
+### 1. Improve User Experience
+- **Goal:** Drastically reduce initial load times and improve page transitions.
+- **Impact:** Seamless, responsive UI for IT administrators.
 
-### 2. modernize-ui-framework
-* **goal:** Transition to **React.js** and **IBM Carbon Components**.
-* **impact:** Consistent design language and modern state management.
+### 2. Modernize UI Framework
+- **Goal:** Transition to **React.js** and **IBM Carbon Components**.
+- **Impact:** Consistent design language and modern state management.
 
-### 3. decoupling-scalability
-* **goal:** Isolate CE logic to ensure independent execution.
-* **impact:** Independent deployment cycles and easier scaling.
-
----
-
-## architecture-overview
-
-### high-level-architecture
-* *Status:* **Under Discussion** (Pending mentor review)
-* (./attachments/ce-architecture-diagram.png)
-
-### low-level-architecture
-* **react-app:** Independent React pages for specific CE views.
-* **data-strategy:** Utilizing mock data for UI stability.
-* **backend-apis:** Mapping existing **Spring/REST APIs**.
-* **e2e-integration:** Defined roadmap and testing strategy.
+### 3. Decoupling and Scalability
+- **Goal:** Isolate CE logic to ensure independent execution.
+- **Impact:** Independent deployment cycles and easier scalability.
 
 ---
 
-## key-challenges
+## Architecture Overview
 
-| challenge | mitigation-strategy |
-| :--- | :--- |
-| **build-config** | Debugging `ui-policy-management` and `maas-react-app` scripts. |
-| **carbon-adoption** | Deep-dive into Carbon grid-system for functional parity. |
-| **backend-complexity** | Systematic analysis of Phase 8 REST APIs. |
+### High-Level Architecture
+- **Status:** Under Discussion (Pending Mentor Review)  
+- `./attachments/ce-architecture-diagram.png`
 
----
-
-## future-scope
-* **micro-frontend-transition:** Blueprint for broader MFE architecture.
-* **performance-telemetry:** Real-time monitoring for ROI analytics.
+### Low-Level Architecture
+- **React App:** Independent React pages for specific CE views.
+- **Data Strategy:** Utilizing mock data for UI stability.
+- **Backend APIs:** Mapping existing **Spring / REST APIs**.
+- **E2E Integration:** Defined roadmap and testing strategy.
 
 ---
 
-## api-sample-response
-```json
-{
-  "status": 200,
-  "data": {
-    "module": "cloud-extender",
-    "version": "2.0.0",
-    "status": "active"
-  }
-}
+## Key Challenges
+
+| Challenge | Mitigation Strategy |
+|----------|--------------------|
+| Build Configuration | Debugging `ui-policy-management` and `maas-react-app` scripts |
+| Carbon Adoption | Deep dive into Carbon Grid System for functional parity |
+| Backend Complexity | Systematic analysis of Phase 8 REST APIs |
+
+---
+
+## Future Scope
+
+* **Micro-Frontend (MFE) Transition:** Using this migration as a blueprint for a broader transition to MFE architecture within MaaS360.
+* **Performance Telemetry:** Implementing real-time monitoring to quantify ROI through "Before vs. After" load-time analytics.
+* **Enhanced Responsiveness:** Leveraging Carbon’s responsive grid to ensure a "Mobile First" management experience for administrators.
