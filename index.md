@@ -1,71 +1,76 @@
-# CE React Migration Project
+# cloud-extender-react-migration
 
-<p align="left">
-  <strong>Team:</strong> Naitik, Mansi <br>
-  <strong>Mentors:</strong> Anoop, Prateek, Suresh
-</p>
-
-<hr>
-
-## Problem Statement
-The existing **Cloud Extender (CE)** view within the IBM MaaS360 application is built on a legacy architecture that has led to several critical performance and usability bottlenecks:
-
-* **High Latency & Loading Times:** Users experience significant delays when accessing CE views, leading to a sub-optimal user experience.
-* **Monolithic Interference:** Tight coupling of the Cloud Extender with the monolithic MaaS360 system causes resource contention from background processes, leading to slower frontend performance and occasional routing conflicts.
-* **Resource Contention:** Loading all components of the main `device-view` simultaneously with CE leads to heavy browser overhead and slower DOM rendering.
-* **Maintenance Complexity:** Debugging specific CE UI issues is difficult within the larger legacy framework, slowing down the development lifecycle for feature updates.
-
-> **Solution:** Migrate the Cloud Extender module to a standalone React-based application using the **Carbon Design System**.
+> **Team:** Naitik, Mansi  
+> **Mentors:** Anoop, Suresh  
+> **Summary:** Documentation for migrating the legacy Cloud Extender (CE) view to a standalone React-based application using Carbon Design System.
 
 ---
 
-## Business Objectives
+## problem-statement
+The existing **Cloud-Extender (CE)** view within the IBM MaaS360 application is built on a legacy architecture that has led to several critical performance and usability bottlenecks:
 
-### 1. Improve User Experience (UX)
-* **Goal:** Drastically reduce initial load times and page transitions.
-* **Impact:** A seamless, responsive UI that allows IT administrators to manage Cloud Extenders without waiting for global app assets to load.
+* **high-latency-loading-times:** Users experience significant delays when accessing CE views.
+* **monolithic-interference:** Tight coupling causes resource contention and routing conflicts.
+* **resource-contention:** Simultaneous loading of `device-view` components leads to heavy browser overhead.
+* **maintenance-complexity:** Difficult debugging within the legacy framework.
 
-### 2. Modernize UI Framework
-* **Goal:** Transition from legacy views to **React.js** and **IBM Carbon Components**.
-* **Impact:** Consistent design language with the rest of the MaaS360 ecosystem and access to modern frontend state management.
-
-### 3. Decoupling & Scalability
-* **Goal:** Isolate CE logic into a standalone React app to ensure independent execution and avoid cross-module interference.
-* **Impact:** Independent deployment cycles during **DDs** and easier scaling of specific CE features without impacting the entire MaaS360 portal.
+**Solution:** Migrate the Cloud Extender module to a standalone React-based application using the **Carbon Design System**.
 
 ---
 
-## Architecture Overview
+## business-objectives
 
-### High-Level Architecture
+### 1. improve-user-experience
+* **goal:** Drastically reduce initial load times and page transitions.
+* **impact:** Seamless, responsive UI for IT administrators.
+
+### 2. modernize-ui-framework
+* **goal:** Transition to **React.js** and **IBM Carbon Components**.
+* **impact:** Consistent design language and modern state management.
+
+### 3. decoupling-scalability
+* **goal:** Isolate CE logic to ensure independent execution.
+* **impact:** Independent deployment cycles and easier scaling.
+
+---
+
+## architecture-overview
+
+### high-level-architecture
 * *Status:* **Under Discussion** (Pending mentor review)
+* (./attachments/ce-architecture-diagram.png)
 
-### Low-Level Architecture
-* **React App:** Transitioning specific CE views into independent React pages.
-* **Data Strategy:** Utilizing dummy data/mocking to stabilize the UI layer during the initial phase.
-* **Backend APIs:** Systematic mapping of existing **Spring/REST APIs** (In coordination with mentors).
-* **E2E Integration:** Defining the integration roadmap and testing strategy.
+### low-level-architecture
+* **react-app:** Independent React pages for specific CE views.
+* **data-strategy:** Utilizing mock data for UI stability.
+* **backend-apis:** Mapping existing **Spring/REST APIs**.
+* **e2e-integration:** Defined roadmap and testing strategy.
 
 ---
 
-## Key Challenges
+## key-challenges
 
-| Challenge | Mitigation Strategy |
+| challenge | mitigation-strategy |
 | :--- | :--- |
-| **Build & Environment Config** | Active debugging of build scripts for `ui-policy-management` and `maas-react-app` to ensure ecosystem compatibility. |
-| **Carbon Design System Adoption** | Deep-dive analysis of Carbon documentation and grid-system layouts to maintain functional parity with legacy views. |
-| **Backend Integration Complexity** | Systematic analysis of existing REST APIs (Phase 8) before initiating frontend-to-backend binding. |
+| **build-config** | Debugging `ui-policy-management` and `maas-react-app` scripts. |
+| **carbon-adoption** | Deep-dive into Carbon grid-system for functional parity. |
+| **backend-complexity** | Systematic analysis of Phase 8 REST APIs. |
 
 ---
 
-## Future Scope
+## future-scope
+* **micro-frontend-transition:** Blueprint for broader MFE architecture.
+* **performance-telemetry:** Real-time monitoring for ROI analytics.
 
-* **Micro-Frontend (MFE) Transition:** Using this migration as a blueprint for a broader transition to MFE architecture within MaaS360.
-* **Performance Telemetry:** Implementing real-time monitoring to quantify ROI through "Before vs. After" load-time analytics.
-* **Enhanced Responsiveness:** Leveraging Carbon’s responsive grid to ensure a "Mobile First" management experience for administrators.
+---
 
-<hr>
-
-<p align="center">
-  <i>IBM MaaS360 - Cloud Extender React Migration 2026</i>
-</p>
+## api-sample-response
+```json
+{
+  "status": 200,
+  "data": {
+    "module": "cloud-extender",
+    "version": "2.0.0",
+    "status": "active"
+  }
+}
