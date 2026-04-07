@@ -1,4 +1,4 @@
-## CE Settings UI Migration to React
+# CE Settings UI Migration to React
 
 **Mentors:** Anoop, Suresh  
 **Interns:** Naitik, Mansi  
