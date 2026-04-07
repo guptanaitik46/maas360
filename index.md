@@ -1,6 +1,4 @@
-# CE Settings UI Migration to React
-
-## Project: CE Related Portal UI - React Migration
+## CE Settings UI Migration to React
 
 **Mentors:** Anoop, Suresh  
 **Interns:** Naitik, Mansi  
