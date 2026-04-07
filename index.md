@@ -1,64 +1,44 @@
-# CE-React-Migration
+# CE Settings UI Migration to React
 
-> **Team:** Naitik, Mansi  
-> **Mentors:** Anoop, Suresh  
+## Project: CE Related Portal UI - React Migration
 
-
-## Problem Statement
-
-The existing **Cloud Extender (CE)** view within the IBM MaaS360 application is built on a legacy architecture that has led to several critical performance and usability bottlenecks:
-
-- **High Latency Loading Times:** Users experience significant delays when accessing CE views.
-- **Monolithic Interference:** Tight coupling causes resource contention and routing conflicts.
-- **Resource Contention:** Simultaneous loading of `Device View` components leads to heavy browser overhead.
-- **Maintenance Complexity:** Difficult debugging within the legacy framework.
-
-**Solution:** Migrate the Cloud Extender module to a standalone React-based application using the **Carbon Design System**.
+**Mentors:** Anoop, Suresh  
+**Interns:** Naitik, Mansi  
 
 ---
 
-## Business Objectives
+## Project Description
 
-### 1. Improve User Experience
-- **Goal:** Drastically reduce initial load times and improve page transitions.
-- **Impact:** Seamless, responsive UI for IT administrators.
+The Cloud Extender (CE) settings UI migration project focuses on transitioning the existing CE UI from a legacy architecture into a standalone, modern React-based application.
 
-### 2. Modernize UI Framework
-- **Goal:** Transition to **React.js** and **IBM Carbon Components**.
-- **Impact:** Consistent design language and modern state management.
+Currently, the CE view is tightly coupled with the monolithic MaaS360 application (device-view), which leads to performance bottlenecks and makes the UI difficult to maintain.
 
-### 3. Decoupling and Scalability
-- **Goal:** Isolate CE logic to ensure independent execution.
-- **Impact:** Independent deployment cycles and easier scalability.
+We are rebuilding this module using **React.js** and the **IBM Carbon Design System** to deliver a faster, more responsive, and consistent user experience.
 
 ---
 
-## Architecture Overview
+## Justification
 
-### High-Level Architecture
-- **Status:** Under Discussion (Pending Mentor Review)  
-- `./attachments/ce-architecture-diagram.png`
+The shift to a React-based architecture helps address several critical issues:
 
-### Low-Level Architecture
-- **React App:** Independent React pages for specific CE views.
-- **Data Strategy:** Utilizing mock data for UI stability.
-- **Backend APIs:** Mapping existing **Spring / REST APIs**.
-- **E2E Integration:** Defined roadmap and testing strategy.
+- **Performance Gains:** Reduces high latency and improves DOM rendering performance.
+- **Independent Scalability:** Allows deploying updates without impacting the entire MaaS360 portal.
+- **Resource Optimization:** Eliminates interference from background processes and avoids unexpected routing conflicts.
+- **Development Velocity:** Simplifies debugging and accelerates feature development.
 
 ---
 
-## Key Challenges
+## Scope
 
-| Challenge | Mitigation Strategy |
-| :--- | :--- |
-| **Build & Environment Config** | Active debugging of build scripts for `ui-policy-management` and `ui-fs-management` to ensure ecosystem compatibility. |
-| **Carbon Design System Adoption** | Deep-dive analysis of Carbon documentation and grid-system layouts to maintain functional parity with legacy views. |
-| **Backend Integration Complexity** | Systematic analysis of existing REST APIs (Phase 8) before initiating frontend-to-backend binding. |
+1. **Modernization:** Transition all legacy UI components to React.js and IBM Carbon components.  
+2. **Decoupling:** Move CE logic into a standalone application to ensure independent execution.  
+3. **API Integration:** Map and integrate existing Spring/REST APIs with the React frontend.  
+4. **Environment Setup:** Configure build scripts and environment variables for smooth setup.  
+5. **UI Fidelity:** Implement responsive layouts for consistent experience across devices.  
 
 ---
 
-## Future Scope
+## Details
 
-* **Micro-Frontend (MFE) Transition:** Using this migration as a blueprint for a broader transition to MFE architecture within MaaS360.
-* **Performance Telemetry:** Implementing real-time monitoring to quantify ROI through "Before vs. After" load-time analytics.
-* **Enhanced Responsiveness:** Leveraging Carbon’s responsive grid to ensure a "Mobile First" management experience for administrators.
+For more technical details, refer to:  
+[CE Settings UI Migration Documentation](./ce-react-migration/ce-react-migration.md)
