@@ -57,6 +57,7 @@ React migration solves these problems:
 ## Technical Details
 
 ### Legacy JSP Architecture (Old)
+
 ![Old Architecture Diagram](./images/ce-old-architecture.png)
 
 **How it works:**
@@ -75,6 +76,8 @@ React migration solves these problems:
 ---
 
 ### New React Architecture (Proposed)
+
+![New Architecture Diagram](./images/ce-new-architecture.png)
 
 **How it works:**
 - Browser loads React app
@@ -108,7 +111,10 @@ React migration solves these problems:
 
 ### Device Summary View
 
+![Device Summary View](./images/device-summary.png)
+
 ### CE Device Grid View
+
 
 ---
 
