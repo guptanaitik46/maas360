@@ -115,6 +115,7 @@ React migration solves these problems:
 
 ### CE Device Grid View
 
+![CE Device Grid View](./images/device-summary.png)
 
 ---
 
