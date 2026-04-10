@@ -57,6 +57,7 @@ React migration solves these problems:
 ## Technical Details
 
 ### Legacy JSP Architecture (Old)
+![Old Architecture Diagram](./images/ce-old-architecture.png)
 
 **How it works:**
 - Browser sends HTTP request to device-view app
